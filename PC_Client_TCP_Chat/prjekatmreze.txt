@@ -1,0 +1,57 @@
+
+API - register
+{
+   "action":"register",
+   "username":"petja96",
+   "password":"123456"
+   "email":"test@test.com"
+}
+response
+{  
+   "success":true,
+}
+ili
+{  
+   "success":false,
+   "reason":"Username already exists"
+}
+
+API - login
+{  
+   "action":"login",
+   "username":"petja96",
+   "password":"123456"
+}
+response
+{  
+   "success":true,
+   "online_users":[  
+      {  
+         "username":"marko96"
+      },
+      {  
+         "username":"uros"
+      },
+      {  
+         "username":"stefan"
+      }
+   ]
+}
+ili
+{  
+   "success":false,
+   "reason":"Wrong username or password"
+}
+
+API - private message
+{  
+   "action":"private_message",
+   "to":"petja96",
+   "message":"cao sta ima?"
+}
+
+API - public message
+{  
+   "action":"public_message",
+   "message":"hello everybody... whats up?"
+}
